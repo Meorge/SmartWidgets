@@ -49,10 +49,6 @@ class MainWindow(QtWidgets.QMainWindow):
 
     def update(self):
         # read text from file and update
-        print("update")
-
-        # print(f"test_widget in sys.modules: {'test_widget' in sys.modules}")
-
         if self.filename not in sys.modules:
             print(f"Importing module {self.filename}")
             importlib.import_module(self.filename)
